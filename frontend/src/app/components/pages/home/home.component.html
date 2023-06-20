@@ -1,0 +1,47 @@
+<app-search></app-search>
+<app-tags></app-tags>
+<app-not-found
+  [visible]="!eyewear || !eyewear.length"
+  resetLinkText="Return Home">
+</app-not-found>
+<ul>
+  <li *ngFor="let e of eyewear">
+    <a routerLink="/e/{{e.id}}">
+      <img [src]="e.imageUrl" alt="e.name"/>
+      <div class="content">
+        <div class="name">
+          {{e.name}}
+        </div>
+        <span class="favorite {{e.favorite?'':'not'}}">
+          ❤
+        </span>
+        <div class="stars">
+          <star-rating
+          [value]="e.stars"
+          [totalstars]="5"
+          checkedcolor="red"
+          uncheckedcolor="black"
+          size="22px"
+          [readonly]="true">
+          </star-rating>
+        </div>
+      </div>
+      <div class="product-item-footer">
+        <div class="tag">
+          <span>Category: </span>
+          {{e.tag}}
+        </div>
+        <div class="power">
+          <span>Power: </span>
+          {{e.power}}
+        </div>
+      </div>
+      <div class="price">
+        <span>Price:</span>
+        ₹{{e.price}}
+      </div>
+    </a>
+  </li>
+</ul> 
+
+

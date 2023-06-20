@@ -1,0 +1,33 @@
+<header>
+  
+  <div class = "container">
+    <a routerLink="/" class="logo"  style="font-size: 20px;">AK Medices</a>
+    <a routerLink="/" class="logo3"(click)="gotohome('home')" style="font-size: 20px;">Home</a>
+    <a routerLink="/" class="logo2"(click)="gotocontactus('contactus')" style="font-size: 20px;">Contact Us</a>
+    <a routerLink="/" class="logo1"(click)="gotoaboutus('aboutus')" style="font-size: 20px;">About Us</a>
+    <nav>
+      <ul>
+        <li *ngIf="!isAuth">
+          <a routerLink="/login">Login</a>
+        </li>
+        <li *ngIf="isAuth" class="menu-container">
+          <a routerLink="/dashboard">{{user.name}}</a>
+          <div class="menu">
+            <a (click)="gotorec('patient')">Profile</a>
+            <a (click)="gotodoctor('doctor')">Doctor</a>
+            <a (click)="gotorecp('reception')">Reception</a>
+            <a (click)="gotofin('fin')">Finance</a>
+            <a (click)="gotoadmin('admin')">Admin</a>
+
+            <a (click)="logout()">Logout</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+
+
+ 

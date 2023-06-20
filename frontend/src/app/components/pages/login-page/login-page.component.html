@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="details">
+    <app-title title="Login Page"></app-title>
+
+    <form [formGroup]="loginForm" (ngSubmit)="submit()">
+
+      <text-input
+        [control]="fc.email"
+        [showErrorsWhen]="isSubmitted"
+        type="email"
+        label="Email">
+      </text-input>
+
+      <text-input
+        [control]="fc.password"
+        [showErrorsWhen]="isSubmitted"
+        type="password"
+        label="Password">
+      </text-input>
+      <br>
+      <label>Select Role
+        <input list="browsers" name="myBrowser" /></label>
+        <datalist id="browsers">
+          <option value="User">
+          <option value="Staff">
+          <option value="Admin">
+        </datalist>
+        <br>
+
+      
+
+      <default-button text="Login"></default-button>
+
+      <div class="register">
+        Not Having Account? &nbsp;
+        <a routerLink="/register" [queryParams]="{returnUrl : returnUrl}">
+          Register here
+        </a>
+      </div>
+    </form>
+  </div>
+</div>

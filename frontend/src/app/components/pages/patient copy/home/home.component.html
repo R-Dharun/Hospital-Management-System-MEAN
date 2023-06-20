@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="charts">
+    <div class="pie" [chart]="donutCharts"></div>
+
+    <div class="line" [chart]="lineChart"></div>
+  </div>
+
+  <div class="treatment-header">
+    <span>Name of treatment</span>
+    <span>Drug administered</span>
+    <span>Doctor</span>
+    <span>Bill</span>
+    <span>Date</span>
+    <span>Paid</span>
+  </div>
+  <div class="treatment-body">
+    
+    
+    
+    <div class="treatment-header">
+      <span>Administered Brufen</span>
+      <span>Brufen</span>
+      <span>Dr. Dharun</span>
+      <span>RS 1000</span>
+      <span>2023-04-05</span>
+      <button>Pending</button>
+    </div>
+    
+    
+    <div class="treatment-header">
+      <span>Administered Brufen</span>
+      <span>Brufen</span>
+      <span>Dr. Dharun</span>
+      <span>RS 1000</span>
+      <span>2023-04-05</span>
+      <button>Pending</button>
+    </div>
+    <div class="treatment-header">
+      <span>Administered Brufen</span>
+      <span>Brufen</span>
+      <span>Dr. Dharun</span>
+      <span>RS 1000</span>
+      <span>2023-04-05</span>
+      <button>Pending</button>
+    </div>
+  </div>
+
+
+
+  <!-- <div *ngIf="diagnosis$ | async as diagnosis">
+
+    <div *ngIf="diagnosis.length">
+        <div class="treatment-body" *ngFor="let item of diagnosis | paginate : { itemsPerPage: 4, currentPage: p }">
+      
+        </div>
+    </div>
+  </div> -->
+  
+
+  <pagination-controls
+    (pageChange)="p = $event"
+    class="pagination"
+  ></pagination-controls>
+</div>

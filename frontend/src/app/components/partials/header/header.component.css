@@ -1,0 +1,103 @@
+header{
+  position: relative;
+  background: white;
+  padding: 0;
+  border-bottom: 1px solid #d90000;
+}
+
+a{
+  color: #f70404;
+}
+
+a:hover{
+  background:#e72929;
+  color: white;
+  cursor: pointer;
+}
+
+.container{
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+a.logo{
+  font-weight: bold;
+  margin: 11px; 
+  padding: 12px;
+ 
+  display: inline-block;
+}
+a.logo1{
+  font-weight: bold;
+
+  margin: 20px; 
+  padding: 5px;
+  margin-right: 900px;
+  display: inline-block;
+}
+
+a.logo2{
+    font-weight: bold;
+    margin: 20px; 
+    padding: 5px;
+    margin-right: 10px;
+    align-items:end;
+    display: inline-block;
+}
+a.logo3{
+  font-weight: bold;
+
+  margin: 20px; 
+  padding: 5px;
+  margin-left: 9px;
+  display: inline-block;
+}
+
+
+ul{
+  display: flex;
+  list-style-type: none;
+  font-weight: bold;
+  padding: -10px;
+}
+
+ul a{
+  padding: 10px;
+  font-weight: bold;
+  font-size: 15pt;
+  display: inline-block;
+}
+
+a span{
+  background: #f30000;
+  color: white;
+  padding: 0.1rem 0.45rem;
+  border-radius: 100rem;
+  font-size:0.9rem;
+}
+
+.menu-container{
+  position: relative;
+}
+
+.menu{
+  position:absolute;
+  z-index:1;
+  background:whitesmoke;
+  display: none;
+}
+.menu span
+{
+  width: 100%;
+  min-width:8rem;
+}
+
+.menu-container:hover .menu{
+  display: block;
+}
+
+.menu a{
+  width: 100%;
+  min-width:8rem;
+}
