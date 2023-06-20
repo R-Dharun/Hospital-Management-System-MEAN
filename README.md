@@ -4,5 +4,5 @@ A online hospital management solution for  managing hospital is a efficient way.
 ## Frontend
 Angular 19+
 # Backend
-Node 9
-MongoDB
+Node 9 
+      MongoDB
